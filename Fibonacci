@@ -1,0 +1,23 @@
+fn main(){
+    let x= 13;
+    fibonacci(x);
+}
+
+fn fibonacci(num:i32) {
+    let mut first = 0;
+    let mut second = 1;
+
+    if num >= 0 {
+        print!("0");
+    }
+    if num >= 1 {
+        print!(", 1");
+    }
+    for i in 2..num {
+        let temp = second;
+        second = first + second;
+        first = temp;
+        print!(", {}", second);
+    }
+    println!(" ");
+}
