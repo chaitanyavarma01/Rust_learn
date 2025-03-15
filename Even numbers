@@ -1,0 +1,12 @@
+fn main(){
+    let number : i32 = 64;
+    let result = is_even(number);
+    print!("{}",result);
+}
+fn is_even(i:i32) -> String{
+    if i % 2 == 0 {
+        "Number is even".to_string()
+        } else {
+        "Number is odd".to_string()
+        }
+}
