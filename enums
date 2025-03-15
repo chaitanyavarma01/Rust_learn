@@ -1,0 +1,21 @@
+enum Shape {
+    Rectangle(f64, f64),
+    Circle(f64),
+}
+
+fn main(){
+    let rect = Shape::Rectangle(10.0, 5.0);
+    let rearea = calculate_area(rect);
+    let circ= Shape::Circle(10.0);
+    let ciarea = calculate_area(circ);
+
+    println!("The area of Rectangle is {}", rearea);
+    println!("the area of circle is {}", ciarea);
+}
+
+fn calculate_area(shape : Shape) -> f64{
+    match shape {
+        Shape::Rectangle(a, b ) => a*b,
+        Shape::Circle(r) => 3.14 * r * r,
+    }
+}
