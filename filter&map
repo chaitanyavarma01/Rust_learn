@@ -1,0 +1,11 @@
+fn main() {
+    let v1 = vec![1,2,3,4,5];
+    let ans = filterandmap(v1);
+    println!("{:?}", ans);
+}
+
+fn filterandmap(v: Vec<i32>) -> Vec<i32> {
+    let new_iter = v.iter().filter(|x|*x%2==0).map(|x|x*2);
+    let new_vec: Vec<i32> = new_iter.collect();
+    return new_vec;
+}
