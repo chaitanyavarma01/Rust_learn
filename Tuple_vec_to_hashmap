@@ -1,0 +1,15 @@
+use std::{collections::HashMap, vec};
+
+fn main(){
+    let input_vec = vec![(String::from("harki"), 22), (String::from("raman"), 32)];
+    let hm = group_values_by_keys(input_vec);
+    println!("{:?}", hm);
+}
+
+fn group_values_by_keys(vec: Vec<(String, i32)>) -> HashMap<String, i32> {
+    let mut hm = HashMap::new();
+    for (key, value) in vec {
+        hm.insert(key, value);
+    }
+    return hm;
+}
