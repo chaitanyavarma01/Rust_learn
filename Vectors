@@ -12,7 +12,7 @@ fn even(vec: Vec<i32>) -> Vec<i32> {
     let mut new_vec = Vec :: new();
     for i in vec{
         if i % 2 == 0{
-            new_vec.push(5);
+            new_vec.push(i);
         }
     }
     return new_vec;
